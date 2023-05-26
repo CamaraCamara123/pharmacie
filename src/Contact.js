@@ -13,7 +13,7 @@ const Contact = () => {
     console.log(conFom)
   }
   return (
-    <div className="container mt-5" style={{width:'400px',margin:'auto',fontFamily:'fantasy'}}>
+    <div className="container mt-5" style={{width:'400px',margin:'auto',fontFamily:'fantasy', minHeight: '650px', maxHeight:'750px'}}>
       <h2 className="mb-3" style={{color:'green'}}>Contact us</h2>
       <form onSubmit={onSubmit}>
         <div className="mb-3">
