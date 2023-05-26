@@ -147,6 +147,7 @@ const Home = () => {
               swipeToSlide={true}
               centerMode={true}
               centerPadding="4px"
+              showIndicators={false}
               autoplay={false}
               speed={500}
               swipeScrollTolerance={5}

@@ -5,7 +5,6 @@ import Navbar from './Header';
 import Home from './Home';
 import About from './About';
 import Contact from './Contact';
-import DetailPharmacie from './DetailPharmacie';
 
 function App() {
   return (
@@ -17,7 +16,6 @@ function App() {
         <Route path='/about' element={<About />}/>
         <Route path='/contact' element={<Contact />}/>
         <Route path='/about' element={<About />}/>
-        <Route path='/detail' element={<DetailPharmacie />}/>
       </Routes>
       </div>
       <Footer />
