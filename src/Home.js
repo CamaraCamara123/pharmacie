@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { Button, Form, Row, Col, Container } from 'react-bootstrap';
 import Map from './Map';
 import CardPharma from './CardPharma';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { Slide } from "react-awesome-reveal";
+
 
 function Cities(props) {
   return (
@@ -86,9 +88,9 @@ const Home = () => {
 
   return (
     <>
-      <Row style={{ margin: 'auto', marginTop: '20px' }}>
+      <Row style={{ margin: 'auto', marginTop: '20px', minHeight:'700px' }}>
         <Col xs={12} md={6}>
-          <Form onSubmit={handleSubmit} style={{fontFamily:'fantasy', backgroundColor:'yellow', borderBlockColor:'green',borderRadius:'15px'}}>
+          <Form onSubmit={handleSubmit} style={{ fontFamily: 'fantasy', backgroundColor: 'yellow', borderBlockColor: 'green', borderRadius: '15px' }}>
             <Row>
               <Col>
                 <Form.Group controlId='Cities'>
@@ -137,27 +139,25 @@ const Home = () => {
             </Row>
           </Form>
           <Row className='' style={{ padding: '20px', display: 'flex', justifyContent: 'center' }}>
-            <Carousel
-              showThumbs={false}
-              showArrows={true}
-              slidesToShow={1}
-              infiniteLoop={true}
-              swipeable={true}
-              emulateTouch={true}
+            <Slider
+              infinite={true}
+              slidesToShow={2}
+              slidesToScroll={1}
+              arrows={true}
+              swipeToSlide={true}
               centerMode={true}
-              showIndicators={true}
-              autoPlay={false}
-              interval={3000}
-              transitionTime={500}
+              centerPadding="0px"
+              autoplay={false}
+              speed={500}
               swipeScrollTolerance={5}
             >
               {pharmacies.map((elt) => (
                 <CardPharma element={elt} key={elt._id} />
               ))}
-            </Carousel>
+            </Slider>
           </Row>
         </Col>
-        <Col xs={12} md={6} style={{ marginBottom: '3px', maxHeight: '460px' }} className='container scale-in-ver-top'>
+        <Col xs={12} md={6} style={{ marginBottom: '3px', minHeight: '650px', maxHeight:'750px'}} className='container scale-in-ver-top'>
           <Map pharmacies={pharmacies} key={mapKey} />
         </Col>
       </Row>

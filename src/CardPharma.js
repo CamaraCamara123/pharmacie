@@ -36,18 +36,18 @@ function CardPharma(props) {
         >
           <Card.Img
             variant='top'
-            src='pharmaciegarde.jpg'
-            style={{ width: '14rem', height: 'auto', marginLeft: '0' }}
+            src={props.element.image}
+            style={{ width: '14rem', height: '14rem', marginLeft: '0' }}
           />
           <Card.Body>
             <Card.Title className='tracking-in-expand-fwd-top carte-title'>
               <b>{props.element.nom}</b>
             </Card.Title>
             <Card.Text
-              style={{ lineHeight: '4px', marginTop: '15px', textAlign: 'center' }}
+              style={{ lineHeight: '6px', marginTop: '15px', textAlign: 'center' }}
             >
               <p>
-                <strong>Zone : </strong>
+                <strong>Localisation: </strong>
                 {props.element.zone.name}
               </p>
               <p>
@@ -75,8 +75,8 @@ function CardPharma(props) {
               <h3 style={{ color: 'blue' }}>{props.element.nom}</h3>
               <div style={{ alignContent: 'flex-start', border: '' }}>
                 <p>
-                  <strong>Localisation : </strong>
-                  {props.element.zone.name}
+                  <strong>Localisation : </strong><br/>
+                  {props.element.adresse}
                 </p>
                 <p>
                   <strong>Garde : </strong>
