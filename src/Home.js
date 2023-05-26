@@ -90,7 +90,7 @@ const Home = () => {
     <>
       <Row style={{ margin: 'auto', marginTop: '20px', minHeight:'700px' }}>
         <Col xs={12} md={6}>
-          <Form onSubmit={handleSubmit} style={{ fontFamily: 'fantasy', backgroundColor: 'yellow', borderBlockColor: 'green', borderRadius: '15px' }}>
+          <Form onSubmit={handleSubmit} style={{ fontFamily: 'fantasy', backgroundColor: 'grey', borderBlockColor: 'green', borderRadius: '15px' }}>
             <Row>
               <Col>
                 <Form.Group controlId='Cities'>
@@ -146,7 +146,7 @@ const Home = () => {
               arrows={true}
               swipeToSlide={true}
               centerMode={true}
-              centerPadding="0px"
+              centerPadding="4px"
               autoplay={false}
               speed={500}
               swipeScrollTolerance={5}
